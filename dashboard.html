@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - MultInfo Hub</title>
+  <meta name="description"
+    content="Dashboard utama MultInfo Hub, portal informasi game, film, buku, musik, dan gadget." />
+  <!-- Link ke file CSS global -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-isi">
+      <!-- Logo di kiri -->
+      <a class="navbar-logo" href="dashboard.html">🌐 MultInfo Hub</a>
+      <!-- Menu navigasi di kanan -->
+      <ul class="navbar-menu">
+        <li><a href="dashboard.html" class="aktif">Dashboard</a></li>
+        <li><a href="kategori.html">Kategori</a></li>
+        <li><a href="jelajahi.html">Jelajahi</a></li>
+        <li><a href="unggulan.html">Unggulan</a></li>
+        <li><a href="trending.html">Trending</a></li>
+        <li><a href="semua.html">Semua Konten</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="tim.html">Tim</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- KONTEN UTAMA -->
+  <main class="konten-utama">
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('images/background.png') center/cover;">
+      <div class="kontainer">
+        <h1 class="hero-judul" style="text-shadow: 0 4px 10px rgba(0,0,0,0.5);">Selamat Datang di MultInfo Hub</h1>
+        <p class="hero-tagline">
+          Portal informasi lengkap seputar Game, Film, Buku, Musik, dan Gadget
+          — semua tersedia dalam satu tempat.
+        </p>
+        <a href="kategori.html" class="tombol-utama">Lihat Semua Kategori</a>
+      </div>
+    </section>
+
+    <!-- Section: 5 Kategori Utama -->
+    <section class="section">
+      <div class="kontainer">
+        <div class="header-section">
+          <h2 class="judul-section">Kategori</h2>
+          <p class="sub-judul-section">Pilih kategori yang ingin kamu jelajahi</p>
+        </div>
+        <div class="grid-kategori">
+
+          <!-- Card kategori Game -->
+          <a href="dhamm/Home/Home.html" class="card-kategori game"
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('images/game.png') center/cover; color: #fff; text-decoration: none;">
+            <span class="card-kategori-icon" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));">🎮</span>
+            <p class="card-kategori-nama" style="color: #fff; text-shadow: 0 2px 5px rgba(0,0,0,0.8);">Game</p>
+            <p class="card-kategori-deskripsi" style="color: #e2e8f0; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">Ulasan
+              dan info game terkini</p>
+          </a>
+
+          <!-- Card kategori Film -->
+          <a href="aldo/index.html" class="card-kategori film"
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('images/film.png') center/cover; color: #fff; text-decoration: none;">
+            <span class="card-kategori-icon" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));">🎬</span>
+            <p class="card-kategori-nama" style="color: #fff; text-shadow: 0 2px 5px rgba(0,0,0,0.8);">Film</p>
+            <p class="card-kategori-deskripsi" style="color: #e2e8f0; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">Resensi
+              dan jadwal film terbaru</p>
+          </a>
+
+          <!-- Card kategori Buku -->
+          <a href="sakhy/index.html" class="card-kategori buku"
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('images/buku.png') center/cover; color: #fff; text-decoration: none;">
+            <span class="card-kategori-icon" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));">📚</span>
+            <p class="card-kategori-nama" style="color: #fff; text-shadow: 0 2px 5px rgba(0,0,0,0.8);">Buku</p>
+            <p class="card-kategori-deskripsi" style="color: #e2e8f0; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
+              Rekomendasi bacaan pilihan</p>
+          </a>
+
+          <!-- Card kategori Gadget -->
+          <a href="eta/halaman_utama.html" class="card-kategori gadget"
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('images/gadget.png') center/cover; color: #fff; text-decoration: none;">
+            <span class="card-kategori-icon" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));">📱</span>
+            <p class="card-kategori-nama" style="color: #fff; text-shadow: 0 2px 5px rgba(0,0,0,0.8);">Gadget</p>
+            <p class="card-kategori-deskripsi" style="color: #e2e8f0; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">Review
+              perangkat teknologi</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: 6 Konten Terbaru -->
+    <section class="section" style="background-color: #fff; padding-top: 60px; padding-bottom: 60px;">
+      <div class="kontainer">
+        <div class="header-section">
+          <h2 class="judul-section">Konten Terbaru</h2>
+          <p class="sub-judul-section">Update terkini dari semua kategori</p>
+        </div>
+        <div class="grid-3">
+
+          <!-- Konten 1: Game -->
+          <div class="card-konten">
+            <span class="badge game">Game</span>
+            <h3 class="card-konten-judul">DOOM Eternal</h3>
+            <p class="card-konten-deskripsi">Game tembak-menembak orang pertama yang intens dengan aksi cepat dan
+              grafis memukau.</p>
+          </div>
+
+          <!-- Konten 2: Game -->
+          <div class="card-konten">
+            <span class="badge game">Game</span>
+            <h3 class="card-konten-judul">Hades</h3>
+            <p class="card-konten-deskripsi">Game roguelike action RPG yang memukau dengan cerita yang mendalam dan
+              gameplay yang adiktif.</p>
+          </div>
+
+          <!-- Konten 3: Film -->
+          <div class="card-konten">
+            <span class="badge film">Film</span>
+            <h3 class="card-konten-judul">Qodrat 2</h3>
+            <p class="card-konten-deskripsi">Film horor religi Indonesia yang mengisahkan perjuangan seorang ustaz dalam
+              menghadapi kekuatan gaib.</p>
+          </div>
+
+          <!-- Konten 4: Buku -->
+          <div class="card-konten">
+            <span class="badge buku">Buku</span>
+            <h3 class="card-konten-judul">Bumi Manusia</h3>
+            <p class="card-konten-deskripsi">Novel sejarah karya Pramoedya Ananta Toer yang mengisahkan perjuangan
+              seorang pemuda Indonesia di era kolonial Belanda.</p>
+          </div>
+
+          <!-- Konten 5: Gadget -->
+          <div class="card-konten">
+            <span class="badge gadget">Gadget</span>
+            <h3 class="card-konten-judul">-</h3>
+            <p class="card-konten-deskripsi">-</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: 4 Navigasi Cepat -->
+    <section class="section">
+      <div class="kontainer">
+        <div class="header-section">
+          <h2 class="judul-section">Navigasi Cepat</h2>
+          <p class="sub-judul-section">Langsung menuju halaman yang kamu butuhkan</p>
+        </div>
+        <div class="grid-4">
+
+          <!-- Navigasi cepat ke Jelajahi -->
+          <a href="jelajahi.html" class="card-navigasi">
+            <span class="card-navigasi-icon">🔍</span>
+            <p class="card-navigasi-judul">Jelajahi</p>
+            <p class="card-navigasi-sub">Temukan konten populer</p>
+          </a>
+
+          <!-- Navigasi cepat ke Trending -->
+          <a href="trending.html" class="card-navigasi">
+            <span class="card-navigasi-icon">🔥</span>
+            <p class="card-navigasi-judul">Trending</p>
+            <p class="card-navigasi-sub">Konten paling viral</p>
+          </a>
+
+          <!-- Navigasi cepat ke Unggulan -->
+          <a href="unggulan.html" class="card-navigasi">
+            <span class="card-navigasi-icon">⭐</span>
+            <p class="card-navigasi-judul">Unggulan</p>
+            <p class="card-navigasi-sub">Pilihan terbaik editor</p>
+          </a>
+
+          <!-- Navigasi cepat ke Tentang -->
+          <a href="about.html" class="card-navigasi">
+            <span class="card-navigasi-icon">ℹ️</span>
+            <p class="card-navigasi-judul">Tentang</p>
+            <p class="card-navigasi-sub">Info website ini</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

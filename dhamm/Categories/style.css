@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+.navbar span.info{
+    color: #f1c40f;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.mnu-button {
+    display: flex;
+    gap: 20px;
+}
+
+.mnu-button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.mnu-button a:hover {
+    color: #f1c40f; 
+}
+.mnu-button a.active {
+    background-color: #ffffff;
+    color: #2c3e50; 
+    padding: 0px 12px;
+    border-radius: 12px; 
+}
+/* ==================== CONTENT ==================== */
+.content {
+    padding: 40px;
+}
+
+.GenreGames h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* ==================== CATEGORIES MENU ==================== */
+
+.categories-menu {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.categories-menu h2 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.categories-menu > p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.category-row {
+    display: block; 
+    background-color: #f9f9f9;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.category-row h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+.category-row p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.category-row.action-row:hover {
+    border-color: #e74c3c; 
+    background-color: #fdf2f1;
+}
+.category-row.action-row:hover h3 {
+    color: #e74c3c; 
+}
+
+.category-row.adventure-row:hover {
+    border-color: #27ae60;
+    background-color: #f0f9f4; 
+}
+.category-row.adventure-row:hover h3 {
+    color: #27ae60;
+}
+
+.category-row.sports-row:hover {
+    border-color: #3498db;
+    background-color: #f1f8fd; 
+}
+.category-row.sports-row:hover h3 {
+    color: #3498db;
+}

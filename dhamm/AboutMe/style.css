@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Mendorong Logo ke kiri, Navigasi ke kanan */
+    align-items: center; /* Membuat teks logo dan menu sejajar lurus secara vertikal */
+    padding: 20px 40px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+.navbar span.info{
+    color: #f1c40f;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.mnu-button {
+    display: flex;
+    gap: 20px;
+}
+
+.mnu-button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.mnu-button a:hover {
+    color: #f1c40f; 
+}
+.mnu-button a.active {
+    background-color: #ffffff;
+    color: #2c3e50; 
+    padding: 0px 12px;
+    border-radius: 12px; 
+}
+/* ==================== CONTENT ==================== */
+.content {
+    padding: 40px;
+}
+
+.recommendation h2 {
+    margin-bottom: 10px;
+    color: #333;
+}

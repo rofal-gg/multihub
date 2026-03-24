@@ -1,0 +1,775 @@
+/* --- Import Font dari Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Lato:wght@400;700&display=swap');
+
+/* --- Variabel Warna dan Ukuran --- */
+:root {
+  /* Warna utama */
+  --warna-utama: #2563eb;
+  --warna-utama-gelap: #1d4ed8;
+  --warna-background: #f1f5f9;
+  --warna-putih: #ffffff;
+  --warna-teks: #1e293b;
+  --warna-teks-abu: #64748b;
+  --warna-border: #e2e8f0;
+
+  /* Warna per kategori */
+  --warna-game: #202c46;
+  --warna-film: #dc2626;
+  --warna-buku: #0d6fdf;
+  --warna-gadget: #0cd8ea;
+
+  /* Ukuran font */
+  --font-judul: 'Poppins', sans-serif;
+  --font-isi: 'Lato', sans-serif;
+
+  /* Shadow */
+  --shadow-kecil: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-sedang: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  /* Border radius */
+  --radius: 12px;
+  --radius-kecil: 8px;
+  --radius-bulat: 50px;
+}
+
+/* --- Reset Dasar --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-isi);
+  background-color: var(--warna-background);
+  color: var(--warna-teks);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* NAVBAR */
+
+/* Bungkus seluruh navbar */
+.navbar {
+  background-color: var(--warna-putih);
+  border-bottom: 2px solid var(--warna-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-kecil);
+}
+
+/* Isi dalam navbar (logo + menu) */
+.navbar-isi {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* Logo di sebelah kiri */
+.navbar-logo {
+  font-family: var(--font-judul);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--warna-utama);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Daftar menu di sebelah kanan */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+/* Setiap link menu */
+.navbar-menu a {
+  font-family: var(--font-isi);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--warna-teks-abu);
+  padding: 6px 10px;
+  border-radius: var(--radius-kecil);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Efek hover pada menu */
+.navbar-menu a:hover {
+  background-color: var(--warna-background);
+  color: var(--warna-utama);
+}
+
+/* Menu yang sedang aktif */
+.navbar-menu a.aktif {
+  background-color: var(--warna-utama);
+  color: var(--warna-putih);
+}
+
+
+/* KONTEN UTAMA */
+
+/* Bungkus konten utama agar footer selalu di bawah */
+.konten-utama {
+  flex: 1;
+}
+
+/* Kontainer umum */
+.kontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+
+/* HERO SECTION (Dashboard) */
+
+.hero {
+  background: linear-gradient(135deg, var(--warna-utama) 0%, var(--warna-utama-gelap) 100%);
+  color: var(--warna-putih);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.hero-judul {
+  font-family: var(--font-judul);
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero-tagline {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* SECTION */
+
+/* Jarak antar section */
+.section {
+  padding: 60px 0;
+}
+
+/* Jarak lebih kecil untuk section kompak */
+.section-kompak {
+  padding: 40px 0;
+}
+
+/* Judul section utama */
+.judul-section {
+  font-family: var(--font-judul);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--warna-teks);
+  margin-bottom: 8px;
+}
+
+/* Sub judul di bawah judul section */
+.sub-judul-section {
+  font-size: 1rem;
+  color: var(--warna-teks-abu);
+  margin-bottom: 32px;
+}
+
+/* Header section: judul + sub judul */
+.header-section {
+  margin-bottom: 32px;
+}
+
+/* GRID LAYOUT */
+
+/* Grid 4 kolom untuk kategori */
+.grid-kategori {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Grid 3 kolom umum */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Grid 4 kolom */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Grid 2 kolom */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+
+/* CARD KATEGORI (icon besar) */
+
+/* Card untuk kategori di dashboard dan categories */
+.card-kategori {
+  background-color: var(--warna-putih);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-kecil);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  border-top: 4px solid transparent;
+}
+
+.card-kategori:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sedang);
+}
+
+/* Icon besar di card kategori */
+.card-kategori-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Nama kategori di card */
+.card-kategori-nama {
+  font-family: var(--font-judul);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--warna-teks);
+  margin-bottom: 8px;
+}
+
+/* Deskripsi singkat di card kategori */
+.card-kategori-deskripsi {
+  font-size: 0.85rem;
+  color: var(--warna-teks-abu);
+  line-height: 1.5;
+}
+
+
+/* CARD KATEGORI BESAR (untuk categories.html) */
+
+.card-kategori-besar {
+  background-color: var(--warna-putih);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: var(--shadow-kecil);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-top: 5px solid transparent;
+}
+
+.card-kategori-besar:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sedang);
+}
+
+.card-kategori-besar .icon-besar {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.card-kategori-besar .nama-besar {
+  font-family: var(--font-judul);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.card-kategori-besar .deskripsi-besar {
+  font-size: 0.9rem;
+  color: var(--warna-teks-abu);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+/* CARD KONTEN (dengan badge) */
+
+.card-konten {
+  background-color: var(--warna-putih);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow-kecil);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-konten:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sedang);
+}
+
+/* Badge kategori kecil */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-bulat);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-judul);
+  margin-bottom: 10px;
+}
+
+/* Judul di card konten */
+.card-konten-judul {
+  font-family: var(--font-judul);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--warna-teks);
+  margin-bottom: 8px;
+}
+
+/* Deskripsi di card konten */
+.card-konten-deskripsi {
+  font-size: 0.875rem;
+  color: var(--warna-teks-abu);
+  line-height: 1.5;
+}
+
+
+/* CARD UNGGULAN BESAR (featured.html) */
+
+.card-unggulan {
+  background-color: var(--warna-putih);
+  border-radius: var(--radius);
+  padding: 36px;
+  box-shadow: var(--shadow-kecil);
+  border-left: 6px solid var(--warna-utama);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 24px;
+}
+
+.card-unggulan:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sedang);
+}
+
+/* Label "Unggulan" */
+.label-unggulan {
+  display: inline-block;
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 4px 12px;
+  border-radius: var(--radius-bulat);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.card-unggulan-judul {
+  font-family: var(--font-judul);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--warna-teks);
+  margin-bottom: 12px;
+}
+
+.card-unggulan-deskripsi {
+  font-size: 0.95rem;
+  color: var(--warna-teks-abu);
+  line-height: 1.7;
+}
+
+
+/* CARD LIST HORIZONTAL (trending.html) */
+
+.card-list {
+  background-color: var(--warna-putih);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-kecil);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 16px;
+}
+
+.card-list:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sedang);
+}
+
+/* Nomor urut di card list */
+.card-list-nomor {
+  font-family: var(--font-judul);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--warna-border);
+  min-width: 48px;
+  line-height: 1;
+}
+
+/* Isi teks card list */
+.card-list-isi {
+  flex: 1;
+}
+
+.card-list-judul {
+  font-family: var(--font-judul);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--warna-teks);
+  margin-bottom: 6px;
+}
+
+.card-list-deskripsi {
+  font-size: 0.875rem;
+  color: var(--warna-teks-abu);
+}
+
+
+/* FEEDBACK FORM CLASSES */
+
+.feedback-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.feedback-card {
+  background-color: var(--warna-putih);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-kecil);
+  border: 1px solid var(--warna-border);
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-judul);
+  font-weight: 700;
+  color: var(--warna-teks);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--warna-border);
+  border-radius: var(--radius-kecil);
+  font-family: var(--font-isi);
+  font-size: 0.95rem;
+  color: var(--warna-teks);
+  background-color: #f8fafc;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--warna-utama);
+  background-color: #fff;
+}
+
+.form-button {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--warna-utama);
+  color: var(--warna-putih);
+  padding: 14px 24px;
+  border-radius: var(--radius-bulat);
+  font-family: var(--font-judul);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.form-button:hover {
+  background-color: var(--warna-utama-gelap);
+  transform: translateY(-2px);
+}
+
+
+/* TOMBOL UMUM */
+
+/* Tombol utama (solid) */
+.tombol-utama {
+  display: inline-block;
+  background-color: var(--warna-putih);
+  color: var(--warna-utama);
+  padding: 12px 28px;
+  border-radius: var(--radius-bulat);
+  font-family: var(--font-judul);
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: background-color 0.2s, transform 0.2s;
+  border: 2px solid transparent;
+}
+
+.tombol-utama:hover {
+  background-color: #e0e7ff;
+  transform: translateY(-2px);
+}
+
+
+
+/* Tombol solid biru */
+.tombol-solid {
+  display: inline-block;
+  background-color: var(--warna-utama);
+  color: var(--warna-putih);
+  padding: 10px 24px;
+  border-radius: var(--radius-bulat);
+  font-family: var(--font-judul);
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.tombol-solid:hover {
+  background-color: var(--warna-utama-gelap);
+  transform: translateY(-2px);
+}
+
+
+/* WARNA PER KATEGORI */
+
+/* Kelas warna batas atas kartu */
+.card-kategori.game,
+.card-kategori-besar.game {
+  border-top-color: var(--warna-game);
+}
+
+.card-kategori.film,
+.card-kategori-besar.film {
+  border-top-color: var(--warna-film);
+}
+
+.card-kategori.buku,
+.card-kategori-besar.buku {
+  border-top-color: var(--warna-buku);
+}
+
+.card-kategori.gadget,
+.card-kategori-besar.gadget {
+  border-top-color: var(--warna-gadget);
+}
+
+/* Warna border kiri untuk card unggulan */
+.card-unggulan.game {
+  border-left-color: var(--warna-game);
+}
+
+.card-unggulan.film {
+  border-left-color: var(--warna-film);
+}
+
+.card-unggulan.buku {
+  border-left-color: var(--warna-buku);
+}
+
+.card-unggulan.gadget {
+  border-left-color: var(--warna-gadget);
+}
+
+
+
+
+/* BADGE WARNA PER KATEGORI */
+
+.badge.game {
+  background-color: #dbeafe;
+  color: var(--warna-game);
+}
+
+.badge.film {
+  background-color: #fee2e2;
+  color: var(--warna-film);
+}
+
+.badge.buku {
+  background-color: #dcfce7;
+  color: var(--warna-buku);
+}
+
+.badge.gadget {
+  background-color: #ffedd5;
+  color: var(--warna-gadget);
+}
+
+/* ===================================================
+   HEADER HALAMAN (judul + sub halaman)
+   =================================================== */
+
+.header-halaman {
+  background-color: var(--warna-putih);
+  border-bottom: 2px solid var(--warna-border);
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.header-halaman-judul {
+  font-family: var(--font-judul);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--warna-teks);
+  margin-bottom: 8px;
+}
+
+.header-halaman-sub {
+  font-size: 1rem;
+  color: var(--warna-teks-abu);
+}
+
+
+/* CARD NAVIGASI CEPAT */
+
+.card-navigasi {
+  background-color: var(--warna-putih);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-kecil);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  border-bottom: 3px solid var(--warna-utama);
+}
+
+.card-navigasi:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sedang);
+}
+
+.card-navigasi-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card-navigasi-judul {
+  font-family: var(--font-judul);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--warna-teks);
+  margin-bottom: 6px;
+}
+
+.card-navigasi-sub {
+  font-size: 0.8rem;
+  color: var(--warna-teks-abu);
+}
+
+
+/* KOTAK INFO (about.html) */
+
+.kotak-info {
+  background-color: var(--warna-putih);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-kecil);
+  border-left: 4px solid var(--warna-utama);
+}
+
+.kotak-info-judul {
+  font-family: var(--font-judul);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--warna-teks);
+  margin-bottom: 10px;
+}
+
+.kotak-info-isi {
+  font-size: 0.9rem;
+  color: var(--warna-teks-abu);
+  line-height: 1.7;
+}
+
+
+/* CARD TIM (team.html) */
+
+.card-tim {
+  background-color: var(--warna-putih);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-kecil);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-tim:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sedang);
+}
+
+.card-tim-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.card-tim-nama {
+  font-family: var(--font-judul);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--warna-teks);
+  margin-bottom: 6px;
+}
+
+.card-tim-peran {
+  font-size: 0.85rem;
+  color: var(--warna-teks-abu);
+  margin-bottom: 12px;
+}
+
+
+
+
+
+/* UTILITAS TAMBAHAN */
+
+/* Teks rata tengah */
+.tengah {
+  text-align: center;
+}
+
+/* Jarak bawah */
+
+.mb-24 {
+  margin-bottom: 24px;
+}

@@ -1,0 +1,587 @@
+/* Welcome Page Styles */
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    /* Menambahkan gambar latar belakang yang menarik */
+    /* Menggunakan gambar sinematik dengan gradien gelap untuk kontras teks */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%, transparent 60%), url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2525&auto=format&fit=crop') no-repeat center center/cover;
+    color: white;
+    padding: 0 20px;
+}
+
+.welcome-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-explore {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #E50914;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: #B20710;
+}
+
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #E50914; /* Netflix Red */
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    color: white; /* Mengatur warna untuk 'Movie' */
+}
+
+.catalog-highlight { color: #fff428; } /* Mengatur warna krem untuk 'Catalog' */
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover { color: #fff428; }
+
+/* Catalog Grid Styles */
+.catalog-section {
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #E50914;
+}
+
+.movie-grid {
+    display: grid;
+    /* Membuat grid responsif: minimal lebar 220px per item */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+/* Movie Card (Interface Item) */
+.movie-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-poster {
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+    /* Properti untuk menangani gambar latar belakang */
+    background-size: cover;
+    background-position: center;
+}
+
+.card-info {
+    padding: 12px;
+}
+
+.card-title {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.card-genre {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    background-color: #ecf0f1;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Modal / Pop-up Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+.close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #aaa; }
+.close-btn:hover { color: #333; }
+
+/* Modal Typography */
+.modal-title {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.modal-subtitle {
+    margin-top: 15px;
+}
+
+.modal-desc {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Back Button */
+.btn-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #E50914;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.btn-back:hover {
+    color: #B20710;
+}
+
+/* Genre Grid Styles */
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.genre-card-link {
+    text-decoration: none;
+    display: block;
+}
+
+.genre-card-link:hover {
+    transform: translateY(-5px);
+}
+
+.genre-card {
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #333;
+}
+
+/* Different colors for each genre */
+.genre-horor {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 75, 75, 0.6)), url('hantu.jpg') no-repeat center center/cover;
+    border-color: #ffffff;
+}
+
+.genre-action {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 75, 75, 0.6)), url('Action.jpg') no-repeat center center/cover;
+    border-color: #ffffff;
+}
+
+.genre-romance {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 75, 75, 0.6)), url('Romance.jpg') no-repeat center center/cover;
+    border-color: #ffffff;
+}
+
+.genre-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.genre-card-content {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.genre-card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.genre-card-content p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Card Details */
+.card-content {
+    padding: 12px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.card-year {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+/* Synopsis Page Styles */
+.synopsis-container {
+    padding: 40px 0;
+}
+
+.synopsis-content {
+    display: flex;
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.synopsis-poster {
+    flex: 0 0 300px;
+}
+
+.synopsis-poster img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.synopsis-details {
+    flex: 1;
+}
+
+.synopsis-title {
+    font-size: 2rem;
+    color: #E50914;
+    margin-bottom: 15px;
+}
+
+.synopsis-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.synopsis-meta span {
+    background: #f4f4f9;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.synopsis-text {
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Responsive Synopsis */
+@media (max-width: 768px) {
+    .synopsis-content {
+        flex-direction: column;
+    }
+    
+    .synopsis-poster {
+        flex: 0 0 auto;
+    }
+    
+    .synopsis-poster img {
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* About Us Page Styles */
+.about-container {
+    padding: 60px 0;
+    min-height: calc(100vh - 120px);
+}
+
+.about-content {
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    color: #E50914;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-features, .about-team, .about-mission {
+    margin-bottom: 40px;
+}
+
+.about-features h3, .about-team h3, .about-mission h3 {
+    font-size: 1.8rem;
+    color: #E50914;
+    margin-bottom: 20px;
+}
+
+.about-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-features li {
+    background: #f8f9fa;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #E50914;
+    font-size: 1.1rem;
+}
+
+.about-team p, .about-mission p {
+    font-size: 1.2rem;
+    line-height Asc 1.7;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Responsive About */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .about-intro {
+        font-size: 1.1rem;
+    }
+}
+
+/* Contact Page Styles */
+.contact-container {
+    padding: 60px 0;
+    min-height: calc(100vh - 120px);
+}
+
+.contact-content {
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    color: #E50914;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-intro {
+    font-size: 1.2rem;
+    line-height Asc 1.8;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info h3,
+.contact-form-section h3 {
+    font-size Asc 1.8rem;
+    color: Asc #E50914;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    background: #f8f9fa;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #E50914;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links h4 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.social-link {
+    display: block;
+    color: #E50914;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #B20710;
+}
+
+.contact-form {
+    Asc display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact Asc-form textarea:focus {
+    outline: none;
+    border-color Asc #E50914;
+}
+
+.btn-submit {
+    padding: 12px 30 Ascpx;
+    background-color: Asc #E50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: Asc 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #B20710;
+}
+
+/* Responsive Contact */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-content {
+        padding: 30px 20px;
+        margin Asc: 20px;
+    }
+    
+    .contact-title {
+        font-size: 2rem;
+    }
+    
+    .contact-intro {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback & Suggestions - MultInfo Hub</title>
+  <meta name="description" content="Kirimkan feedback dan saran Anda untuk portal MultInfo Hub." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-isi">
+      <a class="navbar-logo" href="dashboard.html">🌐 MultInfo Hub</a>
+      <ul class="navbar-menu">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="kategori.html">Kategori</a></li>
+        <li><a href="jelajahi.html">Jelajahi</a></li>
+        <li><a href="unggulan.html">Unggulan</a></li>
+        <li><a href="trending.html">Trending</a></li>
+        <li><a href="semua.html">Semua Konten</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="tim.html">Tim</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="feedback.html" class="aktif">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- KONTEN UTAMA -->
+  <main class="konten-utama">
+
+    <div class="header-halaman">
+      <div class="kontainer">
+        <h1 class="header-halaman-judul">Feedback & Suggestions</h1>
+        <p class="header-halaman-sub">Kirimkan kritik, saran, atau laporkan masalah seputar portal kami</p>
+      </div>
+    </div>
+
+    <section class="section-kompak">
+      <div class="feedback-container">
+
+        <div class="feedback-card">
+          <form action="#" method="get" class="feedback-form">
+
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" class="form-input" placeholder="Masukkan nama lengkap Anda" required />
+            </div>
+
+            <div class="form-group">
+              <label for="emailAddr">Email Address</label>
+              <input type="email" id="emailAddr" class="form-input" placeholder="Masukkan email Anda" required />
+            </div>
+
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category" class="form-input" required>
+                <option value="">-- Pilih Kategori --</option>
+                <option value="game">Game</option>
+                <option value="film">Film</option>
+                <option value="book">Book</option>
+                <option value="gadget">Gadget</option>
+                <option value="global">Global Website</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-textarea" placeholder="Tuliskan feedback atau saran Anda..." rows="5"
+                required></textarea>
+            </div>
+
+            <button type="button" class="form-button">Send Feedback</button>
+
+          </form>
+        </div>
+
+        <!-- Extra Section -->
+        <div class="kotak-info info-tambahan">
+          <h3 class="kotak-info-judul">Informasi Kontak</h3>
+          <p class="kotak-info-isi">
+            Email: <a href="mailto:multinfohub@email.com" class="link-email">multinfohub@email.com</a>
+          </p>
+          <p class="kotak-info-isi" style="margin-top: 12px; font-size: 0.85rem; color: var(--warna-teks-abu);">
+            *This is a static prototype. Form submission is UI only.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>
